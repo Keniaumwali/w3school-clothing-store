@@ -10,15 +10,20 @@ I created the website with a sidebar navigation menu, a header, a hero banner, a
 - HTML5
 - CSS3
 
-## What I Did
-- Created the website structure using HTML.
-- Styled the website using my own CSS.
-- Added real clothing images inside an `images` folder.
-- Created a responsive product grid.
-- Added a dropdown menu for Jeans.
-- Used CSS hover effects and transitions on links, buttons, and product cards.
-- Used CSS media queries to make the website responsive on different screen sizes.
-- Published the project using GitHub and GitHub Pages.
+## Assignment Requirements
+
+This project follows the assignment requirements:
+
+- Built using HTML and CSS only.
+- Uses a separate `index.html` and `style.css` file.
+- Includes a sidebar navigation menu and top header.
+- Includes a hero banner and clothing product grid.
+- Includes a newsletter subscription section and footer.
+- Uses real clothing images stored in the `images` folder.
+- Uses semantic HTML elements such as `header`, `nav`, `main`, `section`, and `footer`.
+- Uses CSS media queries for responsive layouts.
+- Includes CSS hover effects and transitions.
+- Published using GitHub Pages.
 
 ## Live Website
 
