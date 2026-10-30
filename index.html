@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <h2>LOGO</h2>
+
+        <a href="#shirts">Shirts</a>
+        <a href="#dresses">Dresses</a>
+       <details class="jeans-menu">
+    <summary class="jeans-link">
+        Jeans <span class="menu-arrow">⌄</span>
+    </summary>
+
+    <div class="jeans-submenu">
+        <a href="#skinny">Skinny</a>
+        <a href="#relaxed">Relaxed</a>
+        <a href="#bootcut">Bootcut</a>
+        <a href="#straight">Straight</a>
+    </div>
+</details>
+</div>
+        <a href="#jackets">Jackets</a>
+        <a href="#gymwear">Gymwear</a>
+        <a href="#blazers">Blazers</a>
+        <a href="#shoes">Shoes</a>
+
+        <div class="sidebar-bottom">
+            <a href="#contact">Contact</a>
+            <a href="#newsletter">Newsletter</a>
+            <a href="#subscribe">Subscribe</a>
+        </div>
+    </nav>
+
+    <!-- Main Website Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="top-header">
+            <h1>Jeans</h1>
+           <div class="header-icons">
+    <svg class="cart-icon" viewBox="0 0 24 24"
+         aria-label="Shopping cart" role="img">
+        <path d="M2 3h2l2.5 12.5a2 2 0 0 0 2 1.5h9.8a2 2 0 0 0 1.9-1.4L22 8H5"
+              fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round"/>
+        <circle cx="9" cy="21" r="1" fill="currentColor"/>
+        <circle cx="18" cy="21" r="1" fill="currentColor"/>
+    </svg>
+
+    <svg class="search-icon" viewBox="0 0 24 24"
+         aria-label="Search" role="img">
+        <circle cx="10.5" cy="10.5" r="6.5"
+                fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="m16 16 5 5" fill="none"
+              stroke="currentColor" stroke-width="2"
+              stroke-linecap="round"/>
+    </svg>
+</div>
+        </header>
+
+        <!-- Hero Banner -->
+        <section class="hero">
+            <img src="images/jeans-banner.jpg" alt="Fashion model wearing denim clothing">
+            <div class="hero-text">
+                <h2>New arrivals</h2>
+                <p>COLLECTION 2016</p>
+                <a href="#products" class="shop-button">SHOP NOW</a>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section id="products" class="products">
+            <p class="item-count">8 items</p>
+
+            <div class="product-grid">
+
+                <article class="product-card" id="shirts">
+                    <img src="images/shirt.jpg" alt="White shirt">
+                    <h3>Ripped Skinny Jeans</h3>
+                    <p class="price">$24.99</p>
+                </article>
+
+                <article class="product-card" id="dresses">
+                    <img src="images/dress.jpg" alt="Fashion dress">
+                    <h3>Ripped Skinny Jeans</h3>
+                    <p class="price">$19.99</p>
+                </article>
+
+                <article class="product-card" id="jeans">
+                    <img src="images/jeans.jpg" alt="Blue denim jeans">
+                    <h3>Ripped Skinny Jeans</h3>
+                    <p class="price">$19.99</p>
+                </article>
+
+                <article class="product-card" id="jackets">
+                    <img src="images/jacket.jpg" alt="Fashion jacket">
+                    <h3>Vintage Skinny Jeans</h3>
+                    <p class="price">$14.99</p>
+                </article>
+
+                <article class="product-card" id="gymwear">
+                    <img src="images/gymwear.jpg" alt="Gym clothing">
+                    <h3>Vintage Skinny Jeans</h3>
+                    <p class="price">$14.99</p>
+                </article>
+
+                <article class="product-card" id="blazers">
+                    <img src="images/blazer.jpg" alt="Black blazer">
+                    <h3>Vintage Skinny Jeans</h3>
+                    <p class="price">$14.99</p>
+                </article>
+
+                <article class="product-card" id="shoes">
+                    <img src="images/shoes.jpg" alt="Fashion shoes">
+                    <h3>Vintage Skinny Jeans</h3>
+                    <p class="price">$14.99</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="newsletter">
+            <h2>Subscribe</h2>
+            <p>To get special offers and VIP treatment:</p>
+
+            <form action="#" method="get">
+                <label for="email">Email address</label>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="newsletter">
+            <h2>Subscribe</h2>
+            <p>To get special offers and VIP treatment:</p>
+
+            <form action="#" method="get">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter e-mail" required>
+                <button type="submit" id="subscribe">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="footer">
+
+    <section class="footer-contact">
+        <h2>Contact</h2>
+        <p>Questions? Go ahead.</p>
+
+        <form action="#" method="get">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Name" required>
+
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email"
+                   placeholder="Email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject"
+                   placeholder="Subject" required>
+
+            <label for="message">Message</label>
+            <input type="text" id="message" name="message"
+                   placeholder="Message" required>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <section class="footer-about">
+        <h2>About</h2>
+        <a href="#contact">About us</a>
+        <a href="#contact">We're hiring</a>
+        <a href="#contact">Support</a>
+        <a href="#contact">Find store</a>
+        <a href="#contact">Shipment</a>
+        <a href="#contact">Payment</a>
+        <a href="#contact">Gift card</a>
+        <a href="#contact">Return</a>
+        <a href="#contact">Help</a>
+    </section>
+
+    <section class="footer-store">
+        <h2>Store</h2>
+        <p>Company Name</p>
+        <p>0044123123</p>
+        <p>ex@mail.com</p>
+
+        <h2>We accept</h2>
+        <p>Amex</p>
+        <p>Credit Card</p>
+    </section>
+
+</footer>
+
+<div class="copyright">
+    Powered by HTML and CSS
+</div>
+
+    </main>
+
+</body>
+</html>
