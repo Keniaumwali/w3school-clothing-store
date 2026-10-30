@@ -33,6 +33,7 @@ button,
 }
 
 /* ---------- Sidebar Navigation ---------- */
+
 .sidebar {
     width: 250px;
     height: 100vh;
@@ -77,12 +78,95 @@ button,
     transition: background-color 0.3s ease;
 }
 
+/* ---------- Jeans Dropdown ---------- */
+
+.jeans-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.jeans-menu .jeans-link {
+    display: block;
+    position: relative;
+    padding: 10px 38px 10px 16px;
+    color: #757575;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Remove the browser's default dropdown marker */
+
+.jeans-menu .jeans-link::-webkit-details-marker {
+    display: none;
+}
+
+.jeans-menu .jeans-link::marker {
+    content: "";
+}
+
+/* Add a neat downward triangle */
+
+.jeans-menu .menu-arrow {
+    float: right;
+    font-size: 0;
+}
+
+.jeans-menu .menu-arrow::after {
+    content: "";
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #757575;
+    transition: transform 0.25s ease;
+}
+
+/* Rotate the triangle when the dropdown is open */
+
+.jeans-menu[open] .menu-arrow::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.jeans-menu[open] .jeans-link,
+.jeans-menu .jeans-link:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.jeans-submenu {
+    display: block;
+    padding: 8px 16px 8px 28px;
+}
+
+.jeans-submenu a {
+    display: block;
+    padding: 8px;
+    color: #757575;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.jeans-submenu a:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
 /* ---------- Main Content ---------- */
+
 .main-content {
     margin-left: 250px;
+    padding-bottom: 0;
 }
 
 /* ---------- Header ---------- */
+
 .top-header {
     display: flex;
     justify-content: space-between;
@@ -96,22 +180,8 @@ button,
     margin: 0;
 }
 
-.header-icons {
-    display: flex;
-    gap: 18px;
-    font-size: 23px;
-}
-
-.header-icons span {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.header-icons span:hover {
-    transform: scale(1.15);
-}
-
 /* ---------- Hero Banner ---------- */
+
 .hero {
     position: relative;
     margin: 0 16px 20px;
@@ -158,6 +228,7 @@ button,
 }
 
 /* ---------- Product Grid ---------- */
+
 .products {
     padding: 0 16px 40px;
 }
@@ -209,6 +280,7 @@ button,
 }
 
 /* ---------- Newsletter ---------- */
+
 .newsletter {
     background-color: #000;
     color: #fff;
@@ -252,11 +324,14 @@ button,
 }
 
 /* ---------- Footer ---------- */
+
 .footer {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 28px;
-    padding: 48px 24px;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    align-items: start;
+    gap: 32px;
+    padding: 32px 16px;
+    margin: 0;
     background-color: #f1f1f1;
 }
 
@@ -265,20 +340,29 @@ button,
 }
 
 .footer h2 {
+    margin: 0 0 18px;
     font-size: 20px;
     font-weight: normal;
     text-align: center;
 }
 
-.footer p {
+.footer-contact p {
+    margin-bottom: 12px;
+}
+
+.footer-about a {
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+    text-decoration: underline;
+}
+
+.footer-store p {
     margin: 10px 0;
 }
 
-.footer a {
-    display: block;
-    text-align: center;
-    padding: 5px;
-    text-decoration: underline;
+.footer-store h2:not(:first-child) {
+    margin-top: 28px;
 }
 
 .footer a:hover {
@@ -306,14 +390,19 @@ button,
 }
 
 /* ---------- Copyright ---------- */
+
 .copyright {
+    display: block;
+    margin: 0;
+    padding: 16px 10px;
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 24px 10px;
+    line-height: 1.5;
 }
 
 /* ---------- Responsive Design ---------- */
+
 @media (max-width: 1000px) {
     .product-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -368,6 +457,7 @@ button,
 
     .footer {
         grid-template-columns: 1fr;
+        gap: 32px;
     }
 }
 
@@ -380,253 +470,3 @@ button,
         font-size: 18px;
     }
 }
-.jeans-menu .jeans-link {
-    display: block;
-    padding: 10px 16px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #757575;
-}
-
-.jeans-menu .jeans-link span {
-    float: right;
-}
-
-.jeans-submenu {
-    display: none;
-    padding: 8px 24px;
-}
-
-.jeans-submenu a {
-    display: block;
-    padding: 8px;
-    color: #757575;
-}
-
-.jeans-menu:hover .jeans-submenu,
-.jeans-menu:focus-within .jeans-submenu {
-    display: block;
-}
-
-.jeans-submenu a:hover {
-    background-color: #ccc;
-    color: #000;
-}
-
-.jeans-menu:hover .jeans-link {
-    background-color: #f1f1f1;
-    color: #000;
-}
-.header-icons {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    color: #000;
-}
-
-.cart-icon {
-    display: inline-block;
-    position: relative;
-    width: 22px;
-    height: 15px;
-    border: 2px solid #000;
-    border-top: none;
-    border-radius: 0 0 3px 3px;
-    transform: skew(-10deg);
-    margin: 0 4px;
-}
-
-.cart-icon::before {
-    content: "";
-    position: absolute;
-    width: 8px;
-    border-top: 2px solid #000;
-    left: -7px;
-    top: -4px;
-}
-
-.cart-icon::after {
-    content: "•  •";
-    position: absolute;
-    color: #000;
-    font-size: 15px;
-    white-space: nowrap;
-    left: 1px;
-    top: 8px;
-}
-
-.search-icon {
-    width: 14px;
-    height: 14px;
-    border: 2px solid #000;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-}
-
-.search-icon::after {
-    content: "";
-    width: 7px;
-    border-top: 2px solid #000;
-    position: absolute;
-    right: -6px;
-    bottom: -3px;
-    transform: rotate(45deg);
-}
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
-.main-content,
-.footer,
-.copyright {
-    margin-bottom: 0;
-}
-
-.copyright {
-    display: block;
-    padding: 16px 10px;
-    line-height: 1.5;
-}
-
-.footer {
-    padding-bottom: 24px;
-}
-.jeans-menu {
-    margin: 0;
-    padding: 0;
-}
-
-.jeans-menu .jeans-link {
-    display: block;
-    padding: 10px 16px;
-    color: #757575;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    list-style: none;
-}
-
-.jeans-menu .jeans-link::-webkit-details-marker {
-    display: none;
-}
-
-.jeans-menu .menu-arrow {
-    float: right;
-}
-
-.jeans-menu[open] .jeans-link,
-.jeans-menu .jeans-link:hover {
-    background-color: #ccc;
-    color: #000;
-}
-
-.jeans-submenu {
-    display: block;
-    padding: 8px 16px 8px 28px;
-}
-
-.jeans-submenu a {
-    display: block;
-    padding: 8px;
-    color: #757575;
-    text-decoration: none;
-}
-
-.jeans-submenu a:hover {
-    background-color: #ccc;
-    color: #000;
-}
-.header-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    color: #000;
-}
-
-.cart-icon,
-.search-icon {
-    display: block;
-    width: 24px;
-    height: 24px;
-    flex: 0 0 24px;
-    cursor: pointer;
-}
-
-.cart-icon:hover,
-.search-icon:hover {
-    opacity: 0.6;
-}
-.footer {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr;
-    align-items: start;
-    gap: 32px;
-    padding: 32px 16px;
-    margin: 0;
-    background-color: #f1f1f1;
-}
-
-.footer h2 {
-    margin: 0 0 18px;
-    font-size: 20px;
-    font-weight: normal;
-    text-align: center;
-}
-
-.footer-contact p {
-    margin-bottom: 12px;
-}
-
-.footer-about a {
-    padding: 5px 0;
-}
-
-.footer-store p {
-    margin: 10px 0;
-}
-
-.footer-store h2:not(:first-child) {
-    margin-top: 28px;
-}
-
-.copyright {
-    margin: 0;
-    padding: 16px 10px;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-}
-
-@media (max-width: 700px) {
-    .footer {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-}
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-height: 100vh;
-}
-
-.main-content {
-    padding-bottom: 0;
-}
-
-.footer,
-.copyright {
-    margin-bottom: 0;
-}
-
-.copyright {
-    display: block;
-}
-```
