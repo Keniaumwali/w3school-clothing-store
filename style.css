@@ -1,4 +1,6 @@
 
+/* ---------- General Styles ---------- */
+
 * {
     box-sizing: border-box;
 }
@@ -97,8 +99,6 @@ button,
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Remove the browser's default dropdown marker */
-
 .jeans-menu .jeans-link::-webkit-details-marker {
     display: none;
 }
@@ -106,8 +106,6 @@ button,
 .jeans-menu .jeans-link::marker {
     content: "";
 }
-
-/* Add a neat downward triangle */
 
 .jeans-menu .menu-arrow {
     float: right;
@@ -127,8 +125,6 @@ button,
     border-top: 6px solid #757575;
     transition: transform 0.25s ease;
 }
-
-/* Rotate the triangle when the dropdown is open */
 
 .jeans-menu[open] .menu-arrow::after {
     transform: translateY(-50%) rotate(180deg);
@@ -357,12 +353,39 @@ button,
     text-decoration: underline;
 }
 
-.footer-store p {
-    margin: 10px 0;
+/* ---------- Store Section ---------- */
+
+.footer-store h2 {
+    text-align: left;
+    margin: 0 0 18px;
 }
 
-.footer-store h2:not(:first-child) {
-    margin-top: 28px;
+.footer-store p {
+    margin: 0;
+    text-align: left;
+}
+
+.footer-store .store-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    white-space: normal;
+}
+
+.footer-store .payment-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    white-space: normal;
+}
+
+/* Space between ex@mail.com and We accept */
+.footer-store .accept-heading {
+    display: block;
+    margin: 65px 0 18px;
+    padding: 0;
 }
 
 .footer a:hover {
@@ -394,11 +417,20 @@ button,
 .copyright {
     display: block;
     margin: 0;
-    padding: 16px 10px;
+    padding: 24px 10px;
     background-color: #000;
     color: #fff;
     text-align: center;
     line-height: 1.5;
+}
+
+.copyright a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.copyright a:hover {
+    color: #ccc;
 }
 
 /* ---------- Responsive Design ---------- */
